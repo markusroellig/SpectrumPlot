@@ -25,7 +25,7 @@ Some of the functions in the `SpectrumPlot'context` require access to the header
 
 The spectral axis is given in units of m/s. The data axis is given in Jy/beam.
 
-<img style="float: right;" src="https://github.com/markusroellig/SpectrumPlot/blob/main/im1.png" width="400">
+<img style="float: right;" src="https://github.com/markusroellig/SpectrumPlot/blob/main/im1.png" width="1000">
 
 In the example data used so far, the whole data cube, i.e. the whole map, shared the same header information. This is common for regularly sampled maps, where, e.g. the absolute coordinates of an individual data point can be derived from its index and the header information. This is not necessarily always the case. For this reason we convert the data into spectrum data objects, where each spectrum is assigned its own, relevant metadata, collected from all available FITS header information.
 
@@ -116,7 +116,7 @@ Plotting an example spectrum:
 ``` mathematica
 SpectrumPlot[spectra[[15, 15]], ImageSize -> Medium]
 ```
-<img style="float: right;" src="https://github.com/markusroellig/SpectrumPlot/blob/main/im2.png" width="400">
+<img style="float: right;" src="https://github.com/markusroellig/SpectrumPlot/blob/main/im2.png" width="600">
 
 You can also plot multiple spectra in the same plot.
 Give a list of spectra as argument:
@@ -124,7 +124,7 @@ Give a list of spectra as argument:
 ```mathematica
 SpectrumPlot[Flatten[spectra[[14 ;; 17, 14 ;; 17]], 1], ImageSize -> Medium]
 ```
-<img style="float: right;" src="https://github.com/markusroellig/SpectrumPlot/blob/main/im3.png" width="400">
+<img style="float: right;" src="https://github.com/markusroellig/SpectrumPlot/blob/main/im3.png" width="600">
 
 ###Data Reduction
 
@@ -144,7 +144,7 @@ Average spectrum of a 2 spectra:
 ``` mathematica
 SpectrumPlot[{spectra[[15, 15]], spectra[[14, 14]],AverageSpectrum[{spectra[[15, 15]], spectra[[14, 14]]}] /. Missing[] -> 0},ImageSize -> Medium, PlotStyle -> {Automatic, Automatic, Thick}]
 ```
-<img style="float: right;" src="https://github.com/markusroellig/SpectrumPlot/blob/main/im4.png" width="400">
+<img style="float: right;" src="https://github.com/markusroellig/SpectrumPlot/blob/main/im4.png" width="600">
 
 
 More information can be found in the package documentation.
